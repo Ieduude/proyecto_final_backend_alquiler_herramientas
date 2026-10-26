@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquiler de herramientas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="encabezado">
+    <div>
+        <h1>🔧 Alquiler de herramientas</h1>
+        <p>Panel de administración de herramientas y alquileres</p>
+    </div>
+    <button id="btnActualizar" type="button">Actualizar datos</button>
+</header>
+
+<main class="contenedor">
+
+    <section class="resumen">
+        <h2>Resumen general</h2>
+
+        <div class="tarjetas">
+            <article class="tarjeta">
+                <h3>Total de alquileres</h3>
+                <p id="totalAlquileres">0</p>
+            </article>
+
+            <article class="tarjeta">
+                <h3>Alquileres activos</h3>
+                <p id="alquileresActivos">0</p>
+            </article>
+
+            <article class="tarjeta">
+                <h3>Alquileres atrasados</h3>
+                <p id="alquileresAtrasados">0</p>
+            </article>
+
+            <article class="tarjeta">
+                <h3>Costo estimado total</h3>
+                <p id="costoEstimadoTotal">Q0.00</p>
+            </article>
+        </div>
+    </section>
+
+    <div id="mensaje" role="status" aria-live="polite"></div>
+
+    <section class="panel">
+        <h2>Registrar herramienta</h2>
+
+        <form id="formHerramienta">
+            <label for="nombreHerramienta">Nombre</label>
+            <input id="nombreHerramienta" name="nombre" type="text"
+                   maxlength="80" required>
+
+            <label for="descripcionHerramienta">Descripción</label>
+            <textarea id="descripcionHerramienta" name="descripcion"
+                      maxlength="255"></textarea>
+
+            <label for="tarifaDiaria">Tarifa diaria (Q)</label>
+            <input id="tarifaDiaria" name="tarifaDiaria" type="number"
+                   min="0.01" step="0.01" required>
+
+            <label for="disponibleHerramienta">Disponibilidad</label>
+            <select id="disponibleHerramienta" name="disponible" required>
+                <option value="true">Disponible</option>
+                <option value="false">No disponible</option>
+            </select>
+
+            <button type="submit">Registrar herramienta</button>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Herramientas registradas</h2>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Tarifa diaria</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+                <tbody id="tablaHerramientas">
+                <tr>
+                    <td colspan="5">Cargando herramientas...</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Registrar alquiler</h2>
+
+        <form id="formAlquiler">
+            <label for="nombreCliente">Nombre del cliente</label>
+            <input id="nombreCliente" name="nombreCliente"
+                   type="text" maxlength="100" required>
+
+            <label for="herramientaId">Herramienta disponible</label>
+            <select id="herramientaId" name="herramientaId" required>
+                <option value="">Cargando herramientas...</option>
+            </select>
+
+            <label for="fechaAlquiler">Fecha de alquiler</label>
+            <input id="fechaAlquiler" name="fechaAlquiler"
+                   type="date" required>
+
+            <label for="fechaPrevistaDevolucion">
+                Fecha prevista de devolución
+            </label>
+            <input id="fechaPrevistaDevolucion"
+                   name="fechaPrevistaDevolucion"
+                   type="date" required>
+
+            <button type="submit">Registrar alquiler</button>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Alquileres registrados</h2>
+
+        <div class="filtros">
+            <button type="button" id="btnTodos">Todos</button>
+            <button type="button" id="btnActivos">Activos</button>
+            <button type="button" id="btnAtrasados">Atrasados</button>
+        </div>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Herramienta</th>
+                    <th>Fecha de alquiler</th>
+                    <th>Devolución prevista</th>
+                    <th>Devolución real</th>
+                    <th>Costo estimado</th>
+                    <th>Acción</th>
+                </tr>
+                </thead>
+                <tbody id="tablaAlquileres">
+                <tr>
+                    <td colspan="8">Cargando alquileres...</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Proyecto PF-17 · Sistema de alquiler de herramientas</p>
+</footer>
+
+</body>
+</html>
