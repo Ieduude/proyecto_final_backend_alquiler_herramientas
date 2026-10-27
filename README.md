@@ -247,3 +247,39 @@ Las funcionalidades se pueden probar utilizando Postman:
 12. Consultar el resumen general de los alquileres.
 
 Estas pruebas permiten verificar tanto las operaciones normales como el comportamiento ante errores.
+
+14. Entregables complementarios
+
+Para complementar la documentación del proyecto, se incluyen los siguientes archivos:
+
+14.1. Scripts SQL y datos de prueba
+
+Se incorpora una carpeta database/ con los scripts SQL necesarios para preparar la base de datos y cargar los registros de prueba.
+
+Estos archivos permiten reproducir el entorno de pruebas sin depender únicamente de los registros creados manualmente durante el desarrollo.
+
+estructura.sql: contiene las instrucciones para crear las tablas y definir la estructura de la base de datos.
+datos_prueba.sql: contiene los registros utilizados para probar las funcionalidades del sistema.
+
+Los scripts deben ejecutarse en el orden correspondiente y utilizarse con la base de datos alquiler_herramientas.
+
+14.2. Colección de Postman
+
+Se incluye la colección exportada Alquiler_de_herramientas_API.postman_collection.json, que permite ejecutar solicitudes HTTP para comprobar las funcionalidades de la API REST.
+
+La colección contiene pruebas relacionadas con:
+
+Registro y consulta de herramientas.
+Consulta de herramientas disponibles.
+Registro y consulta de alquileres.
+Consulta de alquileres activos y atrasados.
+Registro de devoluciones.
+Consulta del resumen general.
+Validaciones y respuestas de error.
+14.3. Documento Word de evidencias
+
+Se incorpora el documento Evidencias_PF17.docx, que presenta evidencias de la ejecución de las funcionalidades implementadas en esta versión del proyecto.
+
+El documento incluye capturas de pantalla y resultados de las pruebas realizadas, con el propósito de demostrar el funcionamiento del sistema.
+
+Las evidencias abarcan la interfaz web, las operaciones de la API mediante Postman, los registros de la base de datos y las validaciones de las reglas de negocio.
