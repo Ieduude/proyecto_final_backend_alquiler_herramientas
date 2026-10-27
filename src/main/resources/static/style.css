@@ -168,13 +168,13 @@ th {
     border-radius: 6px;
 }
 
-#mensaje.exito {
+#mensaje.mensaje-exito {
     display: block;
     background: #d9f4e3;
     color: #175c32;
 }
 
-#mensaje.error {
+#mensaje.mensaje-error {
     display: block;
     background: #ffe1e1;
     color: #8a1f1f;
