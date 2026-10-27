@@ -276,10 +276,3 @@ Consulta de alquileres activos y atrasados.
 Registro de devoluciones.
 Consulta del resumen general.
 Validaciones y respuestas de error.
-14.3. Documento Word de evidencias
-
-Se incorpora el documento Evidencias_PF17.docx, que presenta evidencias de la ejecución de las funcionalidades implementadas en esta versión del proyecto.
-
-El documento incluye capturas de pantalla y resultados de las pruebas realizadas, con el propósito de demostrar el funcionamiento del sistema.
-
-Las evidencias abarcan la interfaz web, las operaciones de la API mediante Postman, los registros de la base de datos y las validaciones de las reglas de negocio.
