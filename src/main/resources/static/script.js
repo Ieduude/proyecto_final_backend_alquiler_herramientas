@@ -295,8 +295,11 @@ async function registrarAlquiler(evento) {
         return;
     }
 
-    if (alquiler.fechaPrevistaDevolucion < alquiler.fechaAlquiler) {
-        mostrarMensaje("La devolución prevista no puede ser anterior al alquiler.", true);
+    if (alquiler.fechaPrevistaDevolucion <= alquiler.fechaAlquiler) {
+        mostrarMensaje(
+            "La devolución prevista debe ser posterior a la fecha de alquiler.",
+            true
+        );
         return;
     }
 
